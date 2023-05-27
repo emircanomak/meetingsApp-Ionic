@@ -1,0 +1,21 @@
+{
+    "meeting": [
+      {
+        "customerName": "Emircan ",
+        "customerLastName": "Omak",
+        "dateOfMeeting": "2023-04-04",
+        "timeOfMeeting": "11:00",
+        "service": "Saç Kesimi",
+        "id": 1
+      },
+      {
+        "customerName": "Emre",
+        "customerLastName": "Doğru",
+        "dateOfMeeting": "2023-06-05",
+        "timeOfMeeting": "12:00",
+        "service": "Saç Kesimi,Sakal tıraşı",
+        "id": 2
+      }
+    
+    ]
+  }
