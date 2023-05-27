@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class MeetingService {
   
   apiUrl= 'http://localhost:3000/meeting';
-  meetingModel: ICreateMeetingModel[] = [];
+  meetings: ICreateMeetingModel[] = [];
 
   constructor(private httpClient:HttpClient) { }
 

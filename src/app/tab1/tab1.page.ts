@@ -15,7 +15,7 @@ export class Tab1Page {
 
   ngOnInit():void{
     this.activatedRoute.params.subscribe((params)=>{
-      
+      this.getMeeting();
     })
   }
   getMeeting(){
