@@ -20,8 +20,5 @@ export class MeetingService {
     return this.httpClient.get<ICreateMeetingModel>(this.apiUrl + '/' + id)
   }
 
-  addMeeting(value:any){
-    return this.httpClient.post(this.apiUrl, value);
-  }
   
 }
