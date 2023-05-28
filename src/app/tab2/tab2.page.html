@@ -12,35 +12,38 @@
       <ion-title size="large">Randevu Ekle</ion-title>
     </ion-toolbar>
   </ion-header>
-  
+
   <!-- add meeting -->
   <ion-list>
-    <form [formGroup]="meetingAddForm"> 
+    <form [formGroup]="meetingAddForm">
+      <ion-item>
+        <ion-input label="Müşteri adı" placeholder="Adınızı Girin" formControlName="customerName"></ion-input>
+      </ion-item>
 
-        <ion-input  label="Müşteri adı" placeholder="Adınızı Girin" formControlName="customerName"></ion-input>
-      
       <ion-item>
         <ion-input label="Müşteri Soyadı" placeholder="Soyadınızı Girin" formControlName="customerLastName"></ion-input>
       </ion-item>
+      
       <ion-list>
         <ion-item>
-          <ion-select
-           
-          >
-            <ion-select-option></ion-select-option>               
-          </ion-select>
+            <ion-input label="Hizmet" placeholder="Hizmet Seçiniz" formControlName="service"></ion-input>
         </ion-item>
         <ion-item lines="none">
           <ion-label></ion-label>
         </ion-item>
       </ion-list>
       <ion-item>
-        <ion-datetime></ion-datetime>
+        <ion-datetime formControlName="dateOfMeeting"></ion-datetime>
       </ion-item>
-   
-      <ion-button (click)="addMeeting()">Randevu oluştur</ion-button>
- </form>
-   </ion-list>
+      <ion-button (click)="addMeeting()" id="present-alert">Randevu Oluştur</ion-button>
+      <ion-alert
+        trigger="present-alert"
+        header="BAŞARILI !"
+        message="Randevunuz Oluşturuldu"
+        [buttons]="alertButtons" 
+      ></ion-alert>
+    </form>
+  </ion-list>
 
   <!-- <app-explore-container name="Tab 2 page"></app-explore-container> -->
 </ion-content>

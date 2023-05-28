@@ -11,6 +11,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 
 export class Tab2Page {
+  alertButtons = ['OK'];
   meetingAddForm:FormGroup;
   
   constructor(private formBuilder:FormBuilder, private crudService:CrudService,private activatedRoute:ActivatedRoute,) {}
