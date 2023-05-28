@@ -16,9 +16,5 @@ export class MeetingService {
   getMeeting(): Observable<ICreateMeetingModel[]>{
     return this.httpClient.get<ICreateMeetingModel[]>(this.apiUrl);
   }
-  getMeetingId(id:number): Observable<ICreateMeetingModel> {
-    return this.httpClient.get<ICreateMeetingModel>(this.apiUrl + '/' + id)
-  }
-
-  
+ 
 }
