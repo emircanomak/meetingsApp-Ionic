@@ -12,40 +12,35 @@
       <ion-title size="large">Randevu Ekle</ion-title>
     </ion-toolbar>
   </ion-header>
+  
   <!-- add meeting -->
   <ion-list>
-    <ion-list>
+    <form [formGroup]="meetingAddForm"> 
+
+        <ion-input  label="Müşteri adı" placeholder="Adınızı Girin" formControlName="customerName"></ion-input>
+      
       <ion-item>
-        <ion-input label="Müşteri adı" placeholder="Adınızı Girin"></ion-input>
-      </ion-item>
-  
-      <ion-item>
-        <ion-input label="Müşteri Soyadı" placeholder="Soyadınızı Girin"></ion-input>
+        <ion-input label="Müşteri Soyadı" placeholder="Soyadınızı Girin" formControlName="customerLastName"></ion-input>
       </ion-item>
       <ion-list>
         <ion-item>
           <ion-select
-            aria-label="Food"
-            [compareWith]="compareWith"
-            placeholder="Hizmet seçiniz"
-            (ionChange)="handleChange($event)"
-            [multiple]="true"
+           
           >
-            <ion-select-option *ngFor="let food of foods" [value]="food">{{ food.name }}</ion-select-option>
+            <ion-select-option></ion-select-option>               
           </ion-select>
         </ion-item>
         <ion-item lines="none">
-          <ion-label>Current value: {{ currentFood}}</ion-label>
+          <ion-label></ion-label>
         </ion-item>
       </ion-list>
       <ion-item>
         <ion-datetime></ion-datetime>
       </ion-item>
-      <ion-button>Randevu oluştur</ion-button>
-
-     
-    </ion-list>
-  </ion-list>
+   
+      <ion-button (click)="addMeeting()">Randevu oluştur</ion-button>
+ </form>
+   </ion-list>
 
   <!-- <app-explore-container name="Tab 2 page"></app-explore-container> -->
 </ion-content>
