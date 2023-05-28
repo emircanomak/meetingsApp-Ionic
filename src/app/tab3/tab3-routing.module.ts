@@ -6,7 +6,12 @@ const routes: Routes = [
   {
     path: '',
     component: Tab3Page,
+  },
+  {
+    path:"updatetab",
+    component:Tab3Page
   }
+ 
 ];
 
 @NgModule({

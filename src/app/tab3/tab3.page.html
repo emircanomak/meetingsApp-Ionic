@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Güncelle
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,33 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title size="large">Güncelle</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-list>
+    <form [formGroup]="meetingUpdateForm">
+      <ion-item>
+        <ion-input label="Müşteri adı" placeholder="Adınızı Girin" formControlName="customerName"></ion-input>
+      </ion-item>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+      <ion-item>
+        <ion-input label="Müşteri Soyadı" placeholder="Soyadınızı Girin" formControlName="customerLastName"></ion-input>
+      </ion-item>
+      
+      <ion-list>
+        <ion-item>
+            <ion-input label="Hizmet" placeholder="Hizmet Seçiniz" formControlName="service"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label></ion-label>
+        </ion-item>
+      </ion-list>
+      <ion-item>
+        <ion-datetime formControlName="dateOfMeeting"></ion-datetime>
+      </ion-item>
+    </form>
+  </ion-list>
+  <ion-button (click)="update()" color="warning">Güncelle</ion-button>
+
+  <!-- <app-explore-container name="Tab 3 page"></app-explore-container> -->
 </ion-content>
