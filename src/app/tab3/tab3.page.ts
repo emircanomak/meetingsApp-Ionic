@@ -17,7 +17,7 @@ export class Tab3Page {
   ngOnInit():void {
     this.activatedRoute.params.subscribe((params)=>{
       this.getMeetingById(params["id"]);
-    })
+    });
   }
   createMeetingUpdateForm(){
     this.meetingUpdateForm = this.formBuilder.group({

@@ -4,5 +4,5 @@ export interface IAddMeetingModel {
     dateOfMeeting:Date;
     timeOfMeeting:number;
     service:string;
-    
+     
 }

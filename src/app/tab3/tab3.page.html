@@ -13,7 +13,7 @@
     </ion-toolbar>
   </ion-header>
   <ion-list>
-    <form [formGroup]="meetingUpdateForm">
+    <form [formGroup]="meetingUpdateForm" *ngIf="meetingUpdateForm">
       <ion-item>
         <ion-input label="Müşteri adı" placeholder="Adınızı Girin" formControlName="customerName"></ion-input>
       </ion-item>

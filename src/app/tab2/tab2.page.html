@@ -15,7 +15,7 @@
 
   <!-- add meeting -->
   <ion-list>
-    <form [formGroup]="meetingAddForm">
+    <form [formGroup]="meetingAddForm" *ngIf="meetingAddForm">
       <ion-item>
         <ion-input label="Müşteri adı" placeholder="Adınızı Girin" formControlName="customerName"></ion-input>
       </ion-item>
