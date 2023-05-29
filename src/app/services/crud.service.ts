@@ -23,5 +23,8 @@ export class CrudService {
   meetingUpdate(id:number, data:IUpdateMeetingModel): Observable<IUpdateMeetingModel>{
     return this.httpClient.put<IUpdateMeetingModel>(this.apiUrl + "/" + id, data)
   }
+  deleteMeeting(data:ICreateMeetingModel):Observable<ICreateMeetingModel>{
+    return this.httpClient.delete<ICreateMeetingModel>(this.apiUrl + '/' + data.id)
+  }
   
 }
