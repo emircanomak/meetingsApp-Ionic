@@ -1,0 +1,24 @@
+{
+    "homePage":
+    {
+        "TİTLE":"Anasayfa",
+        "service":"Saç Kesimi",
+        "buttonUpdate": "Güncelle",
+        "buttonDelete":"Sil",
+        "tabMenuMeeting":"Randevular",
+        "tabMenuMeetingAdd":"Randevu Ekle"
+        
+    },
+    "addMeetingPage":
+    {
+        "TİTLE":"Randevu Ekle",
+        "formName":"Müşteri Adı",
+        "formNamePlaceHolder":"Adınızı Girin",
+        "formLastName":"Müşteri Soyadı",
+        "formLastNamePlaceHolder":"Soyadınızı Giriniz",
+        "formService":"Hizmet",
+        "formServicePlaceHolder":"Hizmet Seçiniz",
+        "formAddButton":"Randevu Oluştur"
+    }
+    
+}

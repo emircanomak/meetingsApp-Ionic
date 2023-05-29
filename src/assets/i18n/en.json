@@ -1,0 +1,24 @@
+{
+    "homePage":
+    {
+        "TİTLE":"Main Page",
+        "service":"Hair cut",
+        "buttonUpdate": "Update",
+        "buttonDelete":"Delete",
+        "tabMenuMeeting":"Meetings",
+        "tabMenuMeetingAdd":"Add Meeting"
+        
+    },
+    "addMeetingPage":
+    {
+        "TİTLE":"Add Meeting",
+        "formName":"Customer Name",
+        "formNamePlaceHolder":"Enter your name",
+        "formLastName":"Customer Last Name",
+        "formLastNamePlaceHolder":"Enter your last name",
+        "formService":"Service",
+        "formServicePlaceHolder":"Enter your service",
+        "formAddButton":"Add Meeting"
+    }
+    
+}
