@@ -3,6 +3,7 @@ import { ICreateMeetingModel } from '../models/createMeetingModel';
 import { MeetingService } from '../services/meeting.service';
 import { ActivatedRoute } from '@angular/router';
 import { CrudService } from '../services/crud.service';
+import { Clipboard, WriteOptions } from '@capacitor/clipboard';
 
 @Component({
   selector: 'app-tab1',
@@ -10,7 +11,7 @@ import { CrudService } from '../services/crud.service';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-  
+  text:string="Randevu detaylarını kopyala";
   meetings:ICreateMeetingModel[]=[];
   constructor(private meetingService:MeetingService, private crudService:CrudService, private activatedRoute: ActivatedRoute) {}
 
@@ -25,6 +26,14 @@ export class Tab1Page {
   deleteMeeting(data:ICreateMeetingModel){
     this.meetings = this.meetings.filter((x)=> x !== data);
     this.crudService.deleteMeeting(data).subscribe();
+  }
+  copy(){
+    var options:WriteOptions = {
+      string:this.text
+    }
+    Clipboard.write(options).then(()=>{
+      alert("Detaylar Kopyalandı")
+    })
   }
 
 

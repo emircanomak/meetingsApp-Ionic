@@ -24,7 +24,7 @@
         Here's a small text description for the card content. Nothing more, nothing less.
         <ion-button [routerLink]="['/updatetab', meeting.id]" color="warning">Güncelle</ion-button>
         <ion-button (click)="deleteMeeting(meeting)" color="danger">Sil</ion-button>
-
+        <ion-button (click)="copy()" color="danger">{{text}}</ion-button>
       </ion-card-content>
 
     </ion-card>
