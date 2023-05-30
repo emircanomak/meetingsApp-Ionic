@@ -4,6 +4,7 @@ import { MeetingService } from '../services/meeting.service';
 import { ActivatedRoute } from '@angular/router';
 import { CrudService } from '../services/crud.service';
 import { Clipboard, WriteOptions } from '@capacitor/clipboard';
+import { FirebaseService } from '../services/firebase.service';
 
 @Component({
   selector: 'app-tab1',
@@ -13,11 +14,12 @@ import { Clipboard, WriteOptions } from '@capacitor/clipboard';
 export class Tab1Page {
   text:string="Randevu detaylarını kopyala";
   meetings:ICreateMeetingModel[]=[];
-  constructor(private meetingService:MeetingService, private crudService:CrudService, private activatedRoute: ActivatedRoute) {}
+  constructor(private meetingService:MeetingService, private crudService:CrudService,private firebaseService:FirebaseService, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit():void{
     this.activatedRoute.params.subscribe((params)=>{
       this.getMeeting();
+      this.getData();
     })
   }
   getMeeting(){
@@ -35,6 +37,11 @@ export class Tab1Page {
       alert("Detaylar Kopyalandı")
     })
   }
-
+  getData(){
+    this.firebaseService.getData().subscribe(res=> {
+      console.log(res);
+      
+    })
+  }
 
 }

@@ -8,11 +8,16 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
 
+import { environment } from 'src/environments/environment';
+import {provideFirebaseApp, initializeApp} from "@angular/fire/app"
+import {getFirestore, provideFirestore} from '@angular/fire/firestore'
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule,RouterModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule,FormsModule,ReactiveFormsModule,],
+  imports: [BrowserModule,RouterModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule,FormsModule,ReactiveFormsModule,
+    provideFirebaseApp(()=> initializeApp(environment.firebaseConfig)),
+    provideFirestore(()=> getFirestore())
+  ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
