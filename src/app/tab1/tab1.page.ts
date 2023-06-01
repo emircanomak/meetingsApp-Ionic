@@ -8,6 +8,7 @@ import { FirebaseService } from '../services/firebase.service';
 import { TranslateConfigService } from '../services/translate-config.service';
 import { TranslateService } from '@ngx-translate/core';
 import { ActionSheetController } from '@ionic/angular';
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-tab1',
@@ -22,6 +23,7 @@ export class Tab1Page {
     private crudService:CrudService,
     private firebaseService:FirebaseService, 
     private activatedRoute: ActivatedRoute,
+    private cd: ChangeDetectorRef,
     private translateConfigService: TranslateConfigService,
     public actionSheetController: ActionSheetController,)
     {    this.translateConfigService.getDefaultLanguage();
@@ -58,7 +60,7 @@ export class Tab1Page {
   getData(){
     this.firebaseService.getData().subscribe(res=> {
       console.log(res);
-      
+  
     })
   }
 

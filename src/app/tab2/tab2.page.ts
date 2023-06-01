@@ -38,7 +38,7 @@ export class Tab2Page {
         this.meetingAddForm.value
       );
       this.crudService.addMeeting(meetingInputDatas).subscribe((data)=>{})
-      console.log(meetingInputDatas);
+
 
     }
   }
