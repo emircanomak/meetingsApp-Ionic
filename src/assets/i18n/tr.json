@@ -1,6 +1,7 @@
 {
 
-        "TİTLE":"Anasayfa",
+        "TİTLE":"Randevular",
+        "TİTLE2":"Randevu Ekle",
         "service":"Saç Kesimi",
         "buttonUpdate": "Güncelle",
         "buttonDelete":"Sil",
@@ -12,6 +13,15 @@
         "formLastNamePlaceHolder":"Soyadınızı Giriniz",
         "formService":"Hizmet",
         "formServicePlaceHolder":"Hizmet Seçiniz",
-        "formAddButton":"Randevu Oluştur"
+        "formAddButton":"Randevu Oluştur",
+        "meetingsDate":"Randevu Tarihi",
+        "meetingsTime":"Randevu Saati",
+        "addService1":"Saç Kesimi", 
+        "addService2":"Skal Traşı", 
+        "addService3":"Manikür", 
+        "addService4":"Pedikür", 
+        "addService5":"Cilt Bakımı",
+        "dateAndTime":"Tarih ve saat seçiniz"
+
     
 }

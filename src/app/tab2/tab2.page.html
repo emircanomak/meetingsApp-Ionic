@@ -9,7 +9,7 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Randevu Ekle</ion-title>
+      <ion-title size="large">{{"tabMenuMeetingAdd"| translate}}</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -26,18 +26,21 @@
               <ion-list>
           <ion-item>
             <ion-select aria-label="Fruit" placeholder="Hizmet seçiniz" [multiple]="true" formControlName="service">
-              <ion-select-option value="Saç kesimi">Saç kesimi</ion-select-option>
-              <ion-select-option value="Sakal Traşı">Sakal Traşı</ion-select-option>
-              <ion-select-option value="Manikür">Manikür</ion-select-option>
-              <ion-select-option value="Pedikür">Pedikür</ion-select-option>
-              <ion-select-option value="Cilt Bakımı">Cilt bakımı</ion-select-option>
+              <ion-select-option value="Saç kesimi">{{"addService1"|translate}}</ion-select-option>
+              <ion-select-option value="Sakal Traşı">{{"addService2"|translate}}</ion-select-option>
+              <ion-select-option value="Manikür">{{"addService3"|translate}}</ion-select-option>
+              <ion-select-option value="Pedikür">{{"addService4"|translate}}</ion-select-option>
+              <ion-select-option value="Cilt Bakımı">{{"addService5"|translate}}</ion-select-option>
             </ion-select>
           </ion-item>
         </ion-list>
-      <ion-item>
-        <ion-datetime formControlName="dateOfMeeting"></ion-datetime>
-      </ion-item>
-      <ion-button (click)="addMeeting()" id="present-alert">Randevu Oluştur</ion-button>
+        <ion-list>
+          <h3 style="margin-left: 15px;">{{"dateAndTime"|translate}} </h3>
+          <ion-item>
+            <ion-datetime formControlName="dateOfMeeting"></ion-datetime>
+          </ion-item>
+        </ion-list>
+      <ion-button style="margin-left: 30%; margin-top: 10px;" (click)="addMeeting()" id="present-alert">{{"formAddButton"| translate}}</ion-button>
       <ion-alert
         trigger="present-alert"
         header="BAŞARILI !"

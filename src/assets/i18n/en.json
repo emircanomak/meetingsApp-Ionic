@@ -1,6 +1,6 @@
 {
-        "TİTLE":"Main Page",
-        "service":"Hair cut",
+        "TİTLE":"Meetings",
+        "TİTLE2":"Add Meetings",
         "buttonUpdate": "Update",
         "buttonDelete":"Delete",
         "tabMenuMeeting":"Meetings",
@@ -10,7 +10,19 @@
         "formLastNamePlaceHolder":"Enter your last name",
         "formService":"Service",
         "formServicePlaceHolder":"Enter your service",
-        "formAddButton":"Add Meeting"
+        "formAddButton":"Add Meeting",
+        "meetingsDate":"Meetings Date",
+        "meetingsTime":"Meetings Time",
+        "addService1":"Hair Cut", 
+        "addService2":"Beard Shaving", 
+        "addService3":"Manicure", 
+        "addService4":"Pedicure", 
+        "addService5":"Skin Care",
+        "tabMenuMeetingAdd":"Add Meeting",
+        "dateAndTime":"Select Date and Time"
+
+
+
     
     
 }

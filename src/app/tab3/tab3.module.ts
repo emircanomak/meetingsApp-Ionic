@@ -8,6 +8,8 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 import { Tab3PageRoutingModule } from './tab3-routing.module';
 import { RouterModule } from '@angular/router';
 
+import { TranslateModule } from '@ngx-translate/core';
+
 @NgModule({
   imports: [
     IonicModule,
@@ -16,7 +18,8 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     ExploreContainerComponentModule,
     Tab3PageRoutingModule,
-    RouterModule
+    RouterModule,
+    TranslateModule
   ],
   declarations: [Tab3Page]
 })

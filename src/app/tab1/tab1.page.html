@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Randevular
+      {{"TİTLE"| translate}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -43,10 +43,10 @@
         <ion-grid>
           <ion-row>
           <ion-col-12>
-            <h3  style="font-size: 18px; color:lightslategrey;">Randevu Tarihi : {{meeting.dateOfMeeting.split('T')[0]}}   </h3>
+            <h3  style="font-size: 18px; color:lightslategrey;">{{"meetingsDate"|translate}} : {{meeting.dateOfMeeting.split('T')[0]}}    </h3>
           </ion-col-12>
           <ion-col-12>
-            <h3 style="font-size: 18px; color: lightslategray;">Randevu Saati : {{meeting.dateOfMeeting.split('T')[1]}}</h3>       
+            <h3 style="font-size: 18px; color: lightslategray;">{{"meetingsTime"|translate }} : {{meeting.dateOfMeeting.split('T')[1]}}</h3>       
           </ion-col-12>
           </ion-row>
         </ion-grid>

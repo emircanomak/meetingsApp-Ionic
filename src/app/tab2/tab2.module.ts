@@ -7,6 +7,8 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 
 import { Tab2PageRoutingModule } from './tab2-routing.module';
 
+import { TranslateModule } from '@ngx-translate/core';
+
 @NgModule({
   imports: [
     IonicModule,
@@ -14,7 +16,8 @@ import { Tab2PageRoutingModule } from './tab2-routing.module';
     ReactiveFormsModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab2PageRoutingModule
+    Tab2PageRoutingModule,
+    TranslateModule
   ],
   declarations: [Tab2Page]
 })
