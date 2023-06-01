@@ -28,6 +28,8 @@ export class Tab2Page {
       timeOfMeeting:["", Validators.required],
       service:["",Validators.required]
     })
+    console.log(this.createMeetingAddForm);
+
   }
   addMeeting(){
     if(this.meetingAddForm.value) {
@@ -36,8 +38,11 @@ export class Tab2Page {
         this.meetingAddForm.value
       );
       this.crudService.addMeeting(meetingInputDatas).subscribe((data)=>{})
+      console.log(meetingInputDatas);
+
     }
   }
+  
 
  
 }

@@ -23,15 +23,17 @@
       <ion-item>
         <ion-input label="Müşteri Soyadı" placeholder="Soyadınızı Girin" formControlName="customerLastName"></ion-input>
       </ion-item>
-      
-      <ion-list>
-        <ion-item>
-            <ion-input label="Hizmet" placeholder="Hizmet Seçiniz" formControlName="service"></ion-input>
-        </ion-item>
-        <ion-item lines="none">
-          <ion-label></ion-label>
-        </ion-item>
-      </ion-list>
+              <ion-list>
+          <ion-item>
+            <ion-select aria-label="Fruit" placeholder="Hizmet seçiniz" [multiple]="true" formControlName="service">
+              <ion-select-option value="Saç kesimi">Saç kesimi</ion-select-option>
+              <ion-select-option value="Sakal Traşı">Sakal Traşı</ion-select-option>
+              <ion-select-option value="Manikür">Manikür</ion-select-option>
+              <ion-select-option value="Pedikür">Pedikür</ion-select-option>
+              <ion-select-option value="Cilt Bakımı">Cilt bakımı</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
       <ion-item>
         <ion-datetime formControlName="dateOfMeeting"></ion-datetime>
       </ion-item>

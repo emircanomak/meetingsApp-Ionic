@@ -4,6 +4,6 @@ export interface ICreateMeetingModel {
     customerLastName:string;
     dateOfMeeting:Date;
     timeOfMeeting:number;
-    service:string;
+    service:Array<string>;
     
 }

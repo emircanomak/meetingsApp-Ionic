@@ -4,6 +4,6 @@ export interface IUpdateMeetingModel {
     customerLastName:string;
     dateOfMeeting:Date;
     timeOfMeeting:number;
-    service:string;
+    service:Array<string>;
     
 }
