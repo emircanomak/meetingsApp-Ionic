@@ -5,6 +5,9 @@ import { ActivatedRoute } from '@angular/router';
 import { CrudService } from '../services/crud.service';
 import { Clipboard, WriteOptions } from '@capacitor/clipboard';
 import { FirebaseService } from '../services/firebase.service';
+import { TranslateConfigService } from '../services/translate-config.service';
+import { TranslateService } from '@ngx-translate/core';
+import { ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -12,9 +15,18 @@ import { FirebaseService } from '../services/firebase.service';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+  language: any;
   text:string="Randevu detaylarını kopyala";
   meetings:ICreateMeetingModel[]=[];
-  constructor(private meetingService:MeetingService, private crudService:CrudService,private firebaseService:FirebaseService, private activatedRoute: ActivatedRoute) {}
+  constructor(private meetingService:MeetingService, 
+    private crudService:CrudService,
+    private firebaseService:FirebaseService, 
+    private activatedRoute: ActivatedRoute,
+    private translateConfigService: TranslateConfigService,
+    public actionSheetController: ActionSheetController,)
+    {    this.translateConfigService.getDefaultLanguage();
+         this.language = this.translateConfigService.getCurrentLang();
+    }
 
   ngOnInit():void{
     this.activatedRoute.params.subscribe((params)=>{
@@ -49,5 +61,39 @@ export class Tab1Page {
       
     })
   }
+
+  //translate
+  async changeLanguage() {
+    const actionSheet = await this.actionSheetController.create({
+      header: 'Languages',
+      buttons: [{
+        text: 'English',
+        icon: 'language-outline',
+        handler: () => {
+          this.language = 'en';
+          this.translateConfigService.setLanguage('en');
+        }
+      }, {
+        text: 'Turkish',
+        icon: 'language-outline',
+        handler: () => {
+          this.language = 'tr';
+          this.translateConfigService.setLanguage('tr');
+        }
+      }, {
+        text: 'Cancel',
+        icon: 'close',
+        role: 'cancel',
+        handler: () => {
+          console.log('Cancel clicked');
+        }
+      }]
+    });
+    await actionSheet.present();
+
+    const { role, data } = await actionSheet.onDidDismiss();
+    console.log('onDidDismiss resolved with role and data', role, data);
+  }
+
 
 }

@@ -7,9 +7,14 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <ion-header [translucent]="true" collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Ana Sayfa</ion-title>
+      <ion-title size="large">{{"TİTLE"|translate}}</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="changeLanguage()">
+          <ion-icon name="language-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
   <!-- meeting card -->
@@ -22,8 +27,8 @@
     
       <ion-card-content>
         Here's a small text description for the card content. Nothing more, nothing less.
-        <ion-button [routerLink]="['/updatetab', meeting.id]" color="warning">Güncelle</ion-button>
-        <ion-button (click)="deleteMeeting(meeting)" color="danger">Sil</ion-button>
+        <ion-button [routerLink]="['/updatetab', meeting.id]" color="warning">{{"buttonUpdate"|translate}}</ion-button>
+        <ion-button (click)="deleteMeeting(meeting)" color="danger">{{"buttonDelete"|translate}}</ion-button>
         <ion-button (click)="copy(meeting)" color="danger">{{text}}</ion-button>
       </ion-card-content>
 

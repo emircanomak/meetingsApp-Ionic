@@ -8,6 +8,9 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 import { RouterModule } from '@angular/router';
 
+import { TranslateModule } from '@ngx-translate/core';
+
+
 @NgModule({
   imports: [
     IonicModule,
@@ -15,7 +18,8 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     ExploreContainerComponentModule,
     Tab1PageRoutingModule,
-    RouterModule
+    RouterModule,
+    TranslateModule
   ],
   declarations: [Tab1Page]
 })
