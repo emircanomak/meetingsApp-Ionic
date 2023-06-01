@@ -28,7 +28,6 @@ export class Tab2Page {
       timeOfMeeting:["", Validators.required],
       service:["",Validators.required]
     })
-    console.log(this.createMeetingAddForm);
 
   }
   addMeeting(){

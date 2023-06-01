@@ -19,6 +19,8 @@ export class Tab1Page {
   language: any;
   text:string="Randevu detaylarını kopyala";
   meetings:ICreateMeetingModel[]=[];
+  public alertButtons = ['Tamam'];
+
   constructor(private meetingService:MeetingService, 
     private crudService:CrudService,
     private firebaseService:FirebaseService, 
@@ -54,7 +56,6 @@ export class Tab1Page {
       string:this.getMeetingsDetail(copyElement)
     }    
     Clipboard.write(options).then(()=>{
-      alert("Detaylar Kopyalandı")
     })
   }
   getData(){
@@ -67,7 +68,7 @@ export class Tab1Page {
   //translate
   async changeLanguage() {
     const actionSheet = await this.actionSheetController.create({
-      header: 'Languages',
+      header: 'Dil Seçenekleri',
       buttons: [{
         text: 'English',
         icon: 'language-outline',
@@ -76,14 +77,14 @@ export class Tab1Page {
           this.translateConfigService.setLanguage('en');
         }
       }, {
-        text: 'Turkish',
+        text: 'Türkçe',
         icon: 'language-outline',
         handler: () => {
           this.language = 'tr';
           this.translateConfigService.setLanguage('tr');
         }
       }, {
-        text: 'Cancel',
+        text: 'Vazgeç',
         icon: 'close',
         role: 'cancel',
         handler: () => {
@@ -96,6 +97,6 @@ export class Tab1Page {
     const { role, data } = await actionSheet.onDidDismiss();
     console.log('onDidDismiss resolved with role and data', role, data);
   }
-
+  
 
 }
