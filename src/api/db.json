@@ -1,21 +1,29 @@
 {
-    "meeting": [
-      {
-        "customerName": "Emircan ",
-        "customerLastName": "Omak",
-        "dateOfMeeting": "2023-04-04",
-        "timeOfMeeting": "11:00",
-        "service": "Saç Kesimi",
-        "id": 1
-      },
-      {
-        "customerName": "Emre",
-        "customerLastName": "Doğru",
-        "dateOfMeeting": "2023-06-05",
-        "timeOfMeeting": "12:00",
-        "service": "Saç Kesimi,Sakal tıraşı",
-        "id": 2
-      }
-    
-    ]
-  }
+  "meeting": [
+    {
+      "customerName": "Emircan",
+      "customerLastName": "Omak",
+      "dateOfMeeting": "2023-08-05T11:25:00",
+      "timeOfMeeting": "",
+      "service": [
+        "Saç kesimi",
+        "Sakal Traşı"
+      ],
+      "id": 1
+    },
+    {
+      "customerName": "Emre",
+      "customerLastName": "Doğru",
+      "dateOfMeeting": "2023-06-16T17:54:00",
+      "timeOfMeeting": "",
+      "service": [
+        "Saç kesimi",
+        "Sakal Traşı",
+        "Manikür",
+        "Pedikür",
+        "Cilt Bakımı"
+      ],
+      "id": 2
+    }
+  ]
+}
