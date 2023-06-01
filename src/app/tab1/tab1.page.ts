@@ -29,10 +29,16 @@ export class Tab1Page {
     this.meetings = this.meetings.filter((x)=> x !== data);
     this.crudService.deleteMeeting(data).subscribe();
   }
-  copy(){
+  getMeetingsDetail(copyElement){
+   return 'Randevuyu alan kişi :'+copyElement.customerName+copyElement.customerLastName+
+   ' Randevu Tarihi ve Saati : '+copyElement.dateOfMeeting+' '+copyElement.timeOfMeeting+' Hizmet Türü : '+copyElement.service
+    
+  }
+  copy(copyElement){
+    
     var options:WriteOptions = {
-      string:this.text
-    }
+      string:this.getMeetingsDetail(copyElement)
+    }    
     Clipboard.write(options).then(()=>{
       alert("Detaylar Kopyalandı")
     })
