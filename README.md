@@ -27,7 +27,7 @@ Page where you can add an appointment "/tabs/tab2"
 ### Images from the App<br/><hr/>
 
 #### Meetings Page
-<img src="https://github.com/emircanomak/meetingsApp-Ionic/blob/master/readme-assets/meetings.png" width="auto"><br/><hr/>
+<img src="readme-assets/addMeetings.png" width="auto"><br/><hr/>
 #### Add Meetings Page
 <img src="https://github.com/emircanomak/meetingsApp-Ionic/blob/master/readme-assets/addMeetings.png" width="auto"><br/><hr/>
 #### Update
