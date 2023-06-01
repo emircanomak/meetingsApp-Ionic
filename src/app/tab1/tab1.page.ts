@@ -50,6 +50,7 @@ export class Tab1Page {
    ' Randevu Tarihi ve Saati : '+copyElement.dateOfMeeting.split('T')[0]+' '+copyElement.dateOfMeeting.split('T')[1]+' Hizmet Türü : '+copyElement.service
     
   }
+  //clipboard
   copy(copyElement){
     
     var options:WriteOptions = {

@@ -21,7 +21,9 @@
         "addService3":"Manikür", 
         "addService4":"Pedikür", 
         "addService5":"Cilt Bakımı",
-        "dateAndTime":"Tarih ve saat seçiniz"
+        "dateAndTime":"Tarih ve saat seçiniz",
+        "TİTLE3":"Güncelle"
+
 
     
 }

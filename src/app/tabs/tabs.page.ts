@@ -9,6 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['tabs.page.scss']
 })
 export class TabsPage {
+  //translate
   language:any
   
   constructor(private translateConfigService: TranslateConfigService, private translate: TranslateService) {
