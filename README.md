@@ -33,9 +33,9 @@ Page where you can add an appointment "/tabs/tab2"
 #### Update
 <img src="readme-assets/updateMeetings.png" width="auto"><br/><hr/>
 #### Multiple Language
-<img src="readme-assets/language" width="auto"><br/><hr/>
+<img src="readme-assets/language.png" width="auto"><br/><hr/>
 #### Clipboard
-<img src="readme-assets/clipBoard" width="auto"><br/><hr/>
+<img src="readme-assets/clipBoard.png" width="auto"><br/><hr/>
 
 
 
