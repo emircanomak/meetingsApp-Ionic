@@ -43,7 +43,7 @@ export class Tab1Page {
   }
   getMeetingsDetail(copyElement){
    return 'Randevuyu alan kişi :'+copyElement.customerName+copyElement.customerLastName+
-   ' Randevu Tarihi ve Saati : '+copyElement.dateOfMeeting+' '+copyElement.timeOfMeeting+' Hizmet Türü : '+copyElement.service
+   ' Randevu Tarihi ve Saati : '+copyElement.dateOfMeeting.split('T')[0]+' '+copyElement.dateOfMeeting.split('T')[1]+' Hizmet Türü : '+copyElement.service
     
   }
   copy(copyElement){

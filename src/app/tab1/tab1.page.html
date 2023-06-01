@@ -26,7 +26,8 @@
       </ion-card-header>
     
       <ion-card-content>
-        Here's a small text description for the card content. Nothing more, nothing less.
+          {{meeting.dateOfMeeting.split('T')[0]}} 
+          {{meeting.dateOfMeeting.split('T')[1]}} 
         <ion-button [routerLink]="['/updatetab', meeting.id]" color="warning">{{"buttonUpdate"|translate}}</ion-button>
         <ion-button (click)="deleteMeeting(meeting)" color="danger">{{"buttonDelete"|translate}}</ion-button>
         <ion-button (click)="copy(meeting)" color="danger">{{text}}</ion-button>
