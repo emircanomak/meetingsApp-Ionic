@@ -19,7 +19,7 @@ export class Tab2Page {
   ngOnInit():void {
     this.createMeetingAddForm();
   }
-  
+  //add meeting form
   createMeetingAddForm(){
     this.meetingAddForm = this.formBuilder.group({
       customerName:["",Validators.required],
@@ -30,6 +30,7 @@ export class Tab2Page {
     })
 
   }
+  //add meeting func.(value)
   addMeeting(){
     if(this.meetingAddForm.value) {
       let meetingInputDatas = Object.assign(
@@ -37,8 +38,6 @@ export class Tab2Page {
         this.meetingAddForm.value
       );
       this.crudService.addMeeting(meetingInputDatas).subscribe((data)=>{})
-
-
     }
   }
   

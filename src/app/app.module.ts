@@ -30,6 +30,7 @@ export function createTranslateLoader(http: HttpClient) {
       deps: [HttpClient]
     }
   }),
+  // firebase config
     provideFirebaseApp(()=> initializeApp(environment.firebaseConfig)),
     provideFirestore(()=> getFirestore()),
     provideStorage(() => getStorage())

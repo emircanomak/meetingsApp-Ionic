@@ -16,16 +16,17 @@
   <!-- add meeting -->
   <ion-list>
     <form [formGroup]="meetingAddForm" *ngIf="meetingAddForm">
-      <ion-item>
-        <ion-input label="Müşteri adı" placeholder="Adınızı Girin" formControlName="customerName"></ion-input>
+      <ion-item style="margin-top: 10px;">
+        <ion-input formControlName="customerName">{{"formName"|translate}}</ion-input>
       </ion-item>
 
-      <ion-item>
-        <ion-input label="Müşteri Soyadı" placeholder="Soyadınızı Girin" formControlName="customerLastName"></ion-input>
+      <ion-item style="margin-top: 10px;">
+        <ion-input formControlName="customerLastName">{{"formLastName"|translate}}</ion-input>
       </ion-item>
-              <ion-list>
+            <ion-list>
           <ion-item>
-            <ion-select aria-label="Fruit" placeholder="Hizmet seçiniz" [multiple]="true" formControlName="service">
+            <p>{{"formServicePlaceHolder"|translate}}</p>
+            <ion-select aria-label="Fruit"  [multiple]="true" formControlName="service">
               <ion-select-option value="Saç kesimi">{{"addService1"|translate}}</ion-select-option>
               <ion-select-option value="Sakal Traşı">{{"addService2"|translate}}</ion-select-option>
               <ion-select-option value="Manikür">{{"addService3"|translate}}</ion-select-option>
