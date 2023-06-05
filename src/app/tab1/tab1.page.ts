@@ -3,12 +3,11 @@ import { ICreateMeetingModel } from '../models/createMeetingModel';
 import { MeetingService } from '../services/meeting.service';
 import { ActivatedRoute } from '@angular/router';
 import { CrudService } from '../services/crud.service';
-import { Clipboard, WriteOptions } from '@capacitor/clipboard';
 import { FirebaseService } from '../services/firebase.service';
 import { TranslateConfigService } from '../services/translate-config.service';
-import { TranslateService } from '@ngx-translate/core';
 import { ActionSheetController } from '@ionic/angular';
 import { ChangeDetectorRef } from '@angular/core';
+import { Share } from '@capacitor/share';
 
 @Component({
   selector: 'app-tab1',
@@ -45,20 +44,32 @@ export class Tab1Page {
     this.meetings = this.meetings.filter((x)=> x !== data);
     this.crudService.deleteMeeting(data).subscribe();
   }
+  //clipboard
   getMeetingsDetail(copyElement){
    return 'Randevuyu alan kişi :'+copyElement.customerName+copyElement.customerLastName+
    ' Randevu Tarihi ve Saati : '+copyElement.dateOfMeeting.split('T')[0]+' '+copyElement.dateOfMeeting.split('T')[1]+' Hizmet Türü : '+copyElement.service
     
   }
-  //clipboard
-  copy(copyElement){
-    
-    var options:WriteOptions = {
-      string:this.getMeetingsDetail(copyElement)
-    }    
-    Clipboard.write(options).then(()=>{
+
+// Capacitor Share plugin
+  share(copyElement){
+    Share.share({
+      title: 'Randevu Detayları',
+      text: this.getMeetingsDetail(copyElement),
     })
   }
+    //clipboard
+  // copy(copyElement){
+    
+  //   var options:WriteOptions = {
+  //     string:this.getMeetingsDetail(copyElement)
+  //   }    
+  //   Clipboard.write(options).then(()=>{
+  //   })
+  // }
+
+
+  //firebase data
   getData(){
     this.firebaseService.getData().subscribe(res=> {
       console.log(res);
